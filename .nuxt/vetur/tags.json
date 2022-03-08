@@ -1,0 +1,11 @@
+{
+  "CardCharacter": {
+    "description": "Auto imported from components/card-character.vue"
+  },
+  "Menu": {
+    "description": "Auto imported from components/menu.vue"
+  },
+  "PainelCard": {
+    "description": "Auto imported from components/painel-card.vue"
+  }
+}
