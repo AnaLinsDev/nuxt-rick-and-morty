@@ -1,12 +1,12 @@
 <template>
   <div class="painel-card">
-
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-
+  name: 'PainelCard',
 }
 </script>
 
@@ -17,6 +17,5 @@ export default {
     height: 80vh;
     border-radius: 20px;
     border: 2px solid rgb(0, 0, 0);
-;
   }
 </style>

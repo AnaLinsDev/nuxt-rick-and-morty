@@ -7,5 +7,14 @@
   },
   "PainelCard": {
     "description": "Auto imported from components/painel-card.vue"
+  },
+  "ChartsFinalLiveChartPie": {
+    "description": "Auto imported from components/charts-final/live-chart-pie.vue"
+  },
+  "ChartsFinalSideChartPie": {
+    "description": "Auto imported from components/charts-final/side-chart-pie.vue"
+  },
+  "ChartsShapeChartPie": {
+    "description": "Auto imported from components/charts-shape/chart-pie.vue"
   }
 }

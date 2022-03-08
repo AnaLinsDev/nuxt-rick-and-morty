@@ -54,7 +54,6 @@ export default {
 
     async povoate(){
       await this.POVOATE_CHARACTERS(this.page)
-      this.characters = this.$store.state.characters.allList
     }
 
   },

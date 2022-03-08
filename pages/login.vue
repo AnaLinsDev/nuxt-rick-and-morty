@@ -21,7 +21,7 @@
 
     <v-checkbox
       v-model="isAdmin"
-      label="Enter as a Admin ?"
+      label="Login as a Admin ?"
     ></v-checkbox>
 
     <v-btn
@@ -44,8 +44,8 @@ export default {
 
   data(){
     return{
-      name:'a',
-      password:'a',
+      name:'ana lins',
+      password:'123123123123',
       isAdmin:true,
     }
   },
@@ -58,6 +58,10 @@ export default {
         return true
       }
     }
+  },
+  // APENAS PARA MELHORAR VELOCIDADE DE DESENVOLVIMENTO
+  mounted(){
+    this.login()
   },
 
   methods: {

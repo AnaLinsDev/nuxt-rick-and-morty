@@ -7,7 +7,6 @@ export default function ({ store, redirect, route }) {
     !store.state.user.isAdmin &&
     (route.name === 'dashboard' || route.name === 'tree-view')
     ) {
-      console.log(route.name)
       return redirect('/characters')
   }
 

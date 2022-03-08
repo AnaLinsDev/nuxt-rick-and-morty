@@ -1,6 +1,9 @@
 export { default as CardCharacter } from '../..\\components\\card-character.vue'
 export { default as Menu } from '../..\\components\\menu.vue'
 export { default as PainelCard } from '../..\\components\\painel-card.vue'
+export { default as ChartsFinalLiveChartPie } from '../..\\components\\charts-final\\live-chart-pie.vue'
+export { default as ChartsFinalSideChartPie } from '../..\\components\\charts-final\\side-chart-pie.vue'
+export { default as ChartsShapeChartPie } from '../..\\components\\charts-shape\\chart-pie.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

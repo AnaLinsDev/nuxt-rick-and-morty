@@ -1,3 +1,8 @@
+body{
+  height: 100vh;
+}
+
+
 .v-main__wrap {
   background-image: 
   linear-gradient(
