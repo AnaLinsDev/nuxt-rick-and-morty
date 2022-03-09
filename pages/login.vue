@@ -44,26 +44,26 @@ export default {
 
   data(){
     return{
-      name:'ana lins',
-      password:'123123123123',
-      isAdmin:true,
+      name:'',
+      password:'',
+      isAdmin:false,
     }
   },
 
   computed: {
     isValid(){
-      if(this.name == '' ||this.password == '' ){
+      if(this.name.trim() == '' ||this.password.trim() == '' ){
         return false
       }else{
         return true
       }
     }
   },
-  // APENAS PARA MELHORAR VELOCIDADE DE DESENVOLVIMENTO
+  /* APENAS PARA MELHORAR VELOCIDADE DE DESENVOLVIMENTO
   mounted(){
     this.login()
   },
-
+*/
   methods: {
     ...mapActions(['LOGIN']),
       login(){   

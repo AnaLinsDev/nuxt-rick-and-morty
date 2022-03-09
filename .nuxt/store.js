@@ -21,6 +21,7 @@ let store = {};
 
   resolveStoreModules(require('..\\store\\modules\\characters.js'), 'modules/characters.js')
   resolveStoreModules(require('..\\store\\modules\\dashboard.js'), 'modules/dashboard.js')
+  resolveStoreModules(require('..\\store\\modules\\tree-view.js'), 'modules/tree-view.js')
   resolveStoreModules(require('..\\store\\modules\\user.js'), 'modules/user.js')
 
   // If the environment supports hot reloading...
@@ -31,6 +32,7 @@ let store = {};
       '..\\store\\index.js',
       '..\\store\\modules\\characters.js',
       '..\\store\\modules\\dashboard.js',
+      '..\\store\\modules\\tree-view.js',
       '..\\store\\modules\\user.js',
     ], () => {
       // Update `root.modules` with the latest definitions.

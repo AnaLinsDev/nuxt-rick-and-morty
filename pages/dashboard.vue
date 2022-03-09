@@ -9,19 +9,23 @@
 
           <div 
           class="live-chart-page-container">
-              <h1 class="live-dash-title">
+              <h2 class="live-dash-title">
                   Live DashBoard
                   <hr>
-                  <ul style="text-align:left;" >
-                    <li>Alive: {{alive}}</li>
-                    <li>Dead: {{dead}}</li>
-                    <li>Uncertain: {{unknown}}</li>
-                  </ul>
-                </h1>
+                </h2>
               <LiveChartPie 
               class="big-chart"
               :key = "keyUpdate"
               :chartdatastatus = "{alive, dead, unknown}" />
+
+              <h1>
+               <br>
+                  <ul style="text-align:left;" >
+                    <li id="green">Alive: {{alive}}</li>
+                    <li id="red">Dead: {{dead}}</li>
+                    <li id="gray">Uncertain: {{unknown}}</li>
+                  </ul>  
+              </h1>            
 
           </div>
 
@@ -49,15 +53,16 @@
 
                 <SideChartPie :chartdatastatus="res" />
                 <div>
-                  <h2 class="chart-info">
+                  <h3 class="chart-info">
                   Page {{res.pageFrom}} to {{res.pageTo}}
                   <hr>
+                  <br>
                   <ul>
-                    <li>Alive: {{res.alive}}</li>
-                    <li>Dead: {{res.dead}}</li>
-                    <li>Uncertain: {{res.unknown}}</li>
+                    <li id="green">Alive: {{res.alive}}</li>
+                    <li id="red">Dead: {{res.dead}}</li>
+                    <li id="gray">Uncertain: {{res.unknown}}</li>
                   </ul>
-                  </h2>
+                  </h3>
                 </div>
 
             </div>
@@ -76,8 +81,6 @@
 import LiveChartPie from '../components/charts-final/live-chart-pie.vue'
 import SideChartPie from '../components/charts-final/side-chart-pie.vue'
 import { mapActions, mapState } from 'vuex'
-
-
 
 export default {
   components:{ SideChartPie, LiveChartPie },
@@ -108,20 +111,23 @@ export default {
   },
 
   methods:{
-    ...mapActions(['POVOATE_CHARACTERS_DASH']),
+    ...mapActions(['POVOATE_CHARACTERS_DASH', 'RESET_STATE']),
 
     async povoate(){
       await this.POVOATE_CHARACTERS_DASH()
+    },
 
-    }
+    async resetState(){
+      await this.RESET_STATE()
+      this.keyUpdate++
+    },
 
   },
 
   mounted(){
+    this.resetState()
     this.povoate()
   }
-
-
   }
 </script>
 
@@ -156,7 +162,6 @@ export default {
     flex-direction: column;
     height: 800px !important;
     overflow: scroll;
-    scrollbar-color: rebeccapurple green !important;
   }
 
     .painel-dashboard::-webkit-scrollbar {
@@ -173,18 +178,32 @@ export default {
     border: 4px solid rgb(0, 0, 0);  
   }
 
-
   .chart-page-container{
     display: flex;
     padding: 20px;
     align-self: flex-start;
   }
   .chart-info{
-    
     margin: auto;
   }
   .live-chart-page-container{
     text-align: center;
+  }
+
+  li{
+    list-style-type: none;
+  }
+
+  #green{
+    color: rgb(0, 255, 0);
+  }
+
+  #gray{
+    color: rgb(131, 131, 131);
+  }
+
+  #red{
+    color: rgb(255, 0, 0);
   }
 
 

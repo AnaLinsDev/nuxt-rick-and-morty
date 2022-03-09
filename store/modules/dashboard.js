@@ -1,13 +1,15 @@
 const axios = require('axios');
 
-const defaultState = {
+const getDefaultState = () => {
+  return {
+
   allList : [],
   idAux : 0,
 
   aliveTotal: 0,
   deadTotal: 0,
   unknownTotal: 0
-}
+}}
 
 const url = 'https://rickandmortyapi.com/api'
 
@@ -15,17 +17,29 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 
 // _____________________________________
 
-const state = () => ({
-  ...defaultState
-})
+const state = getDefaultState()
 
 const mutations = {
+
+  RESET_STATE(state) {
+    Object.assign(state, getDefaultState())
+    /*
+    state.allList = [],
+    state.idAux = 0,
+  
+    state.aliveTotal = 0,
+    state.deadTotal= 0,
+    state.unknownTotal= 0
+    */
+
+    console.log(state)
+  },
+
   POVOATE_CHARACTERS_DASH(state, data){
     this.commit('MINE_DATA', data)
     state.allList.push(data)
-
-    //console.log(state.allList)
   },
+
   MINE_DATA(state, data){
     let alive = 0
     let dead = 0
@@ -53,18 +67,18 @@ const mutations = {
                
 const actions = {
   async POVOATE_CHARACTERS_DASH({commit}){
-
+    let aux = 20
     //Se o quiser pegar dinamicamente
     //const pagesQuant = await dispatch('GET_NUMBER_OF_PAGES');
     const pagesQuant = 42
-    const pagesRest = 42%5
+    const pagesRest = 42%aux
     const pagesMain = pagesQuant - pagesRest
 
     let listGroupPages = []
 
-    for(let i = 10 ; i <= pagesMain; i+=10){
+    for(let i = aux ; i <= pagesMain; i+=aux){
 
-      let ant = (i - 10) + 1
+      let ant = (i - aux) + 1
       listGroupPages = []
       for(let j = ant ; j <= i; j++){
 
@@ -109,6 +123,10 @@ const actions = {
       list: listGroupPages
     })
     
+  },
+
+  RESET_STATE({commit}) {
+    commit('RESET_STATE')
   },
 
   async GET_NUMBER_OF_PAGES(){

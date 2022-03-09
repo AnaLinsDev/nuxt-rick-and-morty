@@ -16,5 +16,11 @@
   },
   "ChartsShapeChartPie": {
     "description": "Auto imported from components/charts-shape/chart-pie.vue"
+  },
+  "ListsListCharacterInfo": {
+    "description": "Auto imported from components/lists/list-character-info.vue"
+  },
+  "ListsListEpisodes": {
+    "description": "Auto imported from components/lists/list-episodes.vue"
   }
 }

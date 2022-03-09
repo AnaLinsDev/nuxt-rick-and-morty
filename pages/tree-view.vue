@@ -4,25 +4,29 @@
     <p class="center"> Here I'm going to use only the first page of each API request </p>
   
     <div class="painel-tree-view">
-      <PainelCard />
-      <PainelCard />
-      <PainelCard />
+
+        <ListEpisodes class="painel-card episodes"/>
+        <ListCharacterInfo class="painel-card episodes"/>
+
     </div>
   
   </div>
 </template>
 
+
+
 <script>
+import ListCharacterInfo from '../components/lists/list-character-info.vue'
+import ListEpisodes from '../components/lists/list-episodes.vue'
+
 export default {
-  beforeCreate(){
-    !this.$store.state.user.loggedIn ? this.$router.push('/login') :
-    !this.$store.state.user.isAdmin ? this.$router.push('/characters') :
-    ''
-  }
+  components: { ListEpisodes, ListCharacterInfo },
 }
 </script>
 
-<style scoped>
+
+
+<style >
 
   h1.title{
     font-size: 50px !important;
@@ -42,5 +46,24 @@ export default {
     margin: auto;
     border-radius: 20px;
     margin-bottom: 100px;
+  }
+
+  .painel-card{
+    overflow: scroll;
+  }
+
+  
+  .painel-card::-webkit-scrollbar {
+    width: 15px;              
+  }
+
+  .painel-card::-webkit-scrollbar-track {
+    background: whitesmoke;    
+  }
+
+  .painel-card::-webkit-scrollbar-thumb {
+    background-color:rgb(255, 255, 255);     
+    border-radius: 12px; 
+    border: 2px solid rgb(0, 0, 0);  
   }
 </style>

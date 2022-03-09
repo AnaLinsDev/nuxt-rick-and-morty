@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const defaultState = {
-  allList : []
+  allListC : []
 }
 
 const url = 'https://rickandmortyapi.com/api'
@@ -14,8 +14,8 @@ const state = () => ({
 
 const mutations = {
   POVOATE_CHARACTERS(state, data){
-    state.allList = defaultState.allList
-    state.allList = [...data] 
+    state.allListC = defaultState.allListC
+    state.allListC = [...data] 
 }
 }
                

@@ -15,7 +15,7 @@ const mutations = {
       state.name     = user.name
       state.isAdmin  = user.isAdmin
       state.loggedIn = true
-      this.$router.push('/dashboard')
+      this.$router.push('/characters')
     }
     catch(e){
       console.log(e)

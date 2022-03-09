@@ -31,7 +31,7 @@ export default {
 
   computed: {
     ...mapState( {
-      characters: (state) => state.characters.allList,
+      characters: (state) => state.characters.allListC,
     })
   },
 

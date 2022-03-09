@@ -77,10 +77,9 @@ export default {
 
 <style scoped>
   .pie{
-    width: 90%;
+    width: 80%;
     height: auto;
     margin: auto;
     padding: 20px;
-    padding-top: 100px ;
   }
 </style>
