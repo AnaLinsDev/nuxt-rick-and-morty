@@ -25,3 +25,10 @@ A PRATICA DE:
 
 ## User Comum
 ![image](https://user-images.githubusercontent.com/60307596/157251232-48b6e389-d1ad-4da9-8ebf-c24caf065230.png)
+
+## Dashboard Antes da primeira resposta
+## Aqui utilizei GET na API com uma assincronização local para simular processo backend, assim, o gráfico maior irá atualizando a partir das respostas nos menores
+![image](https://user-images.githubusercontent.com/60307596/157346087-5db56d0f-e3ad-4df6-9901-e3cc648914d0.png)
+
+## Dashboard Após algumas respostas
+![image](https://user-images.githubusercontent.com/60307596/157346136-dc819c0d-a024-466e-90e2-ca642653486d.png)
