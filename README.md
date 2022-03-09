@@ -32,3 +32,13 @@ A PRATICA DE:
 
 ## Dashboard Após algumas respostas
 ![image](https://user-images.githubusercontent.com/60307596/157346136-dc819c0d-a024-466e-90e2-ca642653486d.png)
+
+## Tree View
+## Antes de selecionar o personagem
+![image](https://user-images.githubusercontent.com/60307596/157511046-78d36a98-43a0-485f-a231-b34817a1090b.png)
+
+
+##Tree View 
+## Após selecionar o personagem
+![image](https://user-images.githubusercontent.com/60307596/157511470-02abfb8e-a901-4bbe-9609-89912b81d91b.png)
+
