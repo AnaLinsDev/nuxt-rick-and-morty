@@ -65,8 +65,6 @@ export default {
           password: this.password,
           isAdmin : this.isAdmin
           })
-
-        
          
       },
   }

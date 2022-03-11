@@ -3,35 +3,30 @@
     "name": "characters",
     "path": "/characters",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\rm-app\\\\nuxt-rick-and-morty\\\\pages\\\\characters.vue",
-    "chunkName": "pages/characters",
-    "_name": "_814c400e"
+    "chunkName": "pages/characters"
   },
   {
     "name": "dashboard",
     "path": "/dashboard",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\rm-app\\\\nuxt-rick-and-morty\\\\pages\\\\dashboard.vue",
-    "chunkName": "pages/dashboard",
-    "_name": "_1dc71055"
+    "chunkName": "pages/dashboard"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\rm-app\\\\nuxt-rick-and-morty\\\\pages\\\\login.vue",
-    "chunkName": "pages/login",
-    "_name": "_797ec1ac"
+    "chunkName": "pages/login"
   },
   {
     "name": "tree-view",
     "path": "/tree-view",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\rm-app\\\\nuxt-rick-and-morty\\\\pages\\\\tree-view.vue",
-    "chunkName": "pages/tree-view",
-    "_name": "_3e713135"
+    "chunkName": "pages/tree-view"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Ana Júlia Lins\\\\Desktop\\\\Vue\\\\rm-app\\\\nuxt-rick-and-morty\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_0cce07da"
+    "chunkName": "pages/index"
   }
 ]
