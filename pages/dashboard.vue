@@ -3,8 +3,6 @@
     <h1 class="title">Dashboard - Rick and Morty API </h1>
     <div class="dashboard-painel-main">
 
-
-
       <PainelCard class="painel-dashboard live">
 
           <div 
@@ -92,12 +90,12 @@ export default {
   },
   
   computed: {
-    ...mapState( {
+    ...mapState( 'dashboard', {
 
-      dataStatus: (state) => state.dashboard.allList,
-      alive: (state) => state.dashboard.aliveTotal,
-      dead: (state) => state.dashboard.deadTotal,
-      unknown: (state) => state.dashboard.unknownTotal,
+      dataStatus: (state) => state.allList,
+      alive: (state) => state.aliveTotal,
+      dead: (state) => state.deadTotal,
+      unknown: (state) => state.unknownTotal,
 
     })
   },
@@ -111,7 +109,8 @@ export default {
   },
 
   methods:{
-    ...mapActions(['POVOATE_CHARACTERS_DASH', 'RESET_STATE']),
+    ...mapActions( 'dashboard', 
+    ['POVOATE_CHARACTERS_DASH', 'RESET_STATE']),
 
     async povoate(){
       await this.POVOATE_CHARACTERS_DASH()
@@ -136,7 +135,6 @@ export default {
   .dashboard-painel-main{
     margin: 50px auto;
     display: flex;
-
   }
 
   h1.title{

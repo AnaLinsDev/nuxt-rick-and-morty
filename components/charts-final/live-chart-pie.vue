@@ -36,8 +36,6 @@ export default {
   
   async mounted () {
 
-    console.log(this.chartdatastatus)
-    
     this.loaded = false
     try {
 

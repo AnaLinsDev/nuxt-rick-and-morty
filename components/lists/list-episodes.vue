@@ -42,8 +42,8 @@
     },
         
     computed: {
-      ...mapState( {
-        episodes: (state) => state.treeView.episodes,
+      ...mapState( 'treeView', {
+        episodes: (state) => state.episodes,
       })
     },
 
@@ -66,7 +66,8 @@
 
 
     methods:{
-      ...mapActions(['POVOATE_EPISODES_TREE', 'GET_CHARACTER_INFO']),
+      ...mapActions( 'treeView', 
+      ['POVOATE_EPISODES_TREE', 'GET_CHARACTER_INFO']),
 
       async povoate(){
           await this.POVOATE_EPISODES_TREE()
@@ -113,8 +114,6 @@
     mounted(){
       this.povoate()
     }
-
-
   }
 </script>
 

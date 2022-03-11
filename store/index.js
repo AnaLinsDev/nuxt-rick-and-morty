@@ -1,11 +1,14 @@
 
-import user from './modules/user'
-import characters from './modules/characters'
-import dashboard from './modules/dashboard'
-import treeView from './modules/tree-view'
-
+import user from './modules/user/user'
+import characters from './modules/characters/characters'
+import dashboard from './modules/dashboard/dashboard'
+import treeView from './modules/tree-view/tree-view'
 
 export default {
-	namespaced: true,
-	modules:{ user, characters, dashboard, treeView }
+	modules:{ 
+		user, 
+		characters, 
+		dashboard, 
+		treeView 
+	}
 }

@@ -19,7 +19,6 @@
       ></v-pagination>
     </div>
 
-
   </div>
 </template>
 
@@ -30,9 +29,9 @@ import { mapActions, mapState } from 'vuex'
 export default {
 
   computed: {
-    ...mapState( {
-      characters: (state) => state.characters.allListC,
-    })
+    ...mapState('characters', {
+      characters: (state) => state.allListC,
+    }),
   },
 
   data(){
@@ -50,7 +49,7 @@ export default {
   },
 
   methods:{
-    ...mapActions(['POVOATE_CHARACTERS']),
+    ...mapActions('characters', ['POVOATE_CHARACTERS']),
 
     async povoate(){
       await this.POVOATE_CHARACTERS(this.page)

@@ -49,7 +49,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['LOGOUT']),
+    ...mapActions('user', ['LOGOUT']),
       logout(){
         this.LOGOUT()
       },

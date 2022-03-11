@@ -7,7 +7,6 @@
           <h1>Choose a Character</h1>
     </div>
 
-
   <div v-else>
     <v-img
       class="image-character"
@@ -31,7 +30,7 @@
 
 <script>
 
-import { mapActions, mapState } from 'vuex'
+import { mapState } from 'vuex'
 
   export default {
     name: 'ListCharacterInfo',
@@ -43,8 +42,8 @@ import { mapActions, mapState } from 'vuex'
     },
 
     computed: {
-      ...mapState( {
-        info: (state) => state.treeView.characterInfo,
+      ...mapState( 'treeView', {
+        info: (state) => state.characterInfo,
       })
     },
 

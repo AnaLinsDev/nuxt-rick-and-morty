@@ -1,31 +1,8 @@
 const axios = require('axios');
 
-const defaultState = {
-  episodes : [],
-  characterInfo : {}
-}
-
 const url = 'https://rickandmortyapi.com/api'
-
-// _____________________________________
-
-const state = () => ({
-  ...defaultState
-})
-
-const mutations = {
-  POVOATE_EPISODES_TREE(state, data){
-    state.episodes = data
-    console.log(state.episodes)
-  },
-
-  GET_CHARACTER_INFO(state, data){
-    state.characterInfo = data
-    console.log(state.characterInfo)
-  }
-}
                
-const actions = {
+export default  {
   async POVOATE_EPISODES_TREE({commit, state}){
 
     if(state.episodes.length > 0){ return }
@@ -68,10 +45,4 @@ const actions = {
 
     commit('GET_CHARACTER_INFO', data)
   },
-}
-
-export default {
-	state,
-	mutations,
-	actions
 }

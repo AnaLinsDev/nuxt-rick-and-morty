@@ -19,10 +19,23 @@ let store = {};
   // Enforce store modules
   store.modules = store.modules || {}
 
-  resolveStoreModules(require('..\\store\\modules\\characters.js'), 'modules/characters.js')
-  resolveStoreModules(require('..\\store\\modules\\dashboard.js'), 'modules/dashboard.js')
-  resolveStoreModules(require('..\\store\\modules\\tree-view.js'), 'modules/tree-view.js')
-  resolveStoreModules(require('..\\store\\modules\\user.js'), 'modules/user.js')
+  resolveStoreModules(require('..\\store\\modules\\characters\\actions.js'), 'modules/characters/actions.js')
+  resolveStoreModules(require('..\\store\\modules\\characters\\characters.js'), 'modules/characters/characters.js')
+  resolveStoreModules(require('..\\store\\modules\\characters\\mutations.js'), 'modules/characters/mutations.js')
+  resolveStoreModules(require('..\\store\\modules\\characters\\state.js'), 'modules/characters/state.js')
+  resolveStoreModules(require('..\\store\\modules\\dashboard\\actions.js'), 'modules/dashboard/actions.js')
+  resolveStoreModules(require('..\\store\\modules\\dashboard\\dashboard.js'), 'modules/dashboard/dashboard.js')
+  resolveStoreModules(require('..\\store\\modules\\dashboard\\defaultState.js'), 'modules/dashboard/defaultState.js')
+  resolveStoreModules(require('..\\store\\modules\\dashboard\\mutations.js'), 'modules/dashboard/mutations.js')
+  resolveStoreModules(require('..\\store\\modules\\dashboard\\state.js'), 'modules/dashboard/state.js')
+  resolveStoreModules(require('..\\store\\modules\\tree-view\\actions.js'), 'modules/tree-view/actions.js')
+  resolveStoreModules(require('..\\store\\modules\\tree-view\\mutations.js'), 'modules/tree-view/mutations.js')
+  resolveStoreModules(require('..\\store\\modules\\tree-view\\state.js'), 'modules/tree-view/state.js')
+  resolveStoreModules(require('..\\store\\modules\\tree-view\\tree-view.js'), 'modules/tree-view/tree-view.js')
+  resolveStoreModules(require('..\\store\\modules\\user\\actions.js'), 'modules/user/actions.js')
+  resolveStoreModules(require('..\\store\\modules\\user\\mutations.js'), 'modules/user/mutations.js')
+  resolveStoreModules(require('..\\store\\modules\\user\\state.js'), 'modules/user/state.js')
+  resolveStoreModules(require('..\\store\\modules\\user\\user.js'), 'modules/user/user.js')
 
   // If the environment supports hot reloading...
 
@@ -30,10 +43,23 @@ let store = {};
     // Whenever any Vuex module is updated...
     module.hot.accept([
       '..\\store\\index.js',
-      '..\\store\\modules\\characters.js',
-      '..\\store\\modules\\dashboard.js',
-      '..\\store\\modules\\tree-view.js',
-      '..\\store\\modules\\user.js',
+      '..\\store\\modules\\characters\\actions.js',
+      '..\\store\\modules\\characters\\characters.js',
+      '..\\store\\modules\\characters\\mutations.js',
+      '..\\store\\modules\\characters\\state.js',
+      '..\\store\\modules\\dashboard\\actions.js',
+      '..\\store\\modules\\dashboard\\dashboard.js',
+      '..\\store\\modules\\dashboard\\defaultState.js',
+      '..\\store\\modules\\dashboard\\mutations.js',
+      '..\\store\\modules\\dashboard\\state.js',
+      '..\\store\\modules\\tree-view\\actions.js',
+      '..\\store\\modules\\tree-view\\mutations.js',
+      '..\\store\\modules\\tree-view\\state.js',
+      '..\\store\\modules\\tree-view\\tree-view.js',
+      '..\\store\\modules\\user\\actions.js',
+      '..\\store\\modules\\user\\mutations.js',
+      '..\\store\\modules\\user\\state.js',
+      '..\\store\\modules\\user\\user.js',
     ], () => {
       // Update `root.modules` with the latest definitions.
       updateModules()

@@ -43,9 +43,9 @@ export default {
 
   data(){
     return{
-      name:'',
-      password:'',
-      isAdmin:false,
+      name:'ana',
+      password:'123123',
+      isAdmin:true,
     }
   },
 
@@ -58,7 +58,7 @@ export default {
   },
 
   methods: {
-      ...mapActions(['LOGIN']),
+      ...mapActions('user',['LOGIN']),
       login(){   
         this.LOGIN({
           name:this.name,
