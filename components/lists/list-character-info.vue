@@ -9,6 +9,7 @@
 
   <div v-else>
     <v-img
+      loading="lazy"
       class="image-character"
       height="200"
       width="200"

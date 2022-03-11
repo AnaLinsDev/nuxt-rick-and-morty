@@ -7,7 +7,7 @@ export default {
       this.$router.push('/characters')
     }
     catch(e){
-      console.log(e)
+      console.error(e)
     }
 	},
   LOGOUT(state) {
@@ -18,7 +18,7 @@ export default {
       this.$router.push('/login')
     }
     catch(e){
-      console.log(e)
+      console.error(e)
     }
 	}
 }            

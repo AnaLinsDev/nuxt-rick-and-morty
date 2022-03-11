@@ -43,9 +43,9 @@ export default {
 
   data(){
     return{
-      name:'a',
-      password:'a',
-      isAdmin:true,
+      name:'',
+      password:'',
+      isAdmin:false,
     }
   },
 
@@ -65,6 +65,8 @@ export default {
           password: this.password,
           isAdmin : this.isAdmin
           })
+
+        
          
       },
   }
