@@ -1,6 +1,8 @@
-import { createLocalVue,  shallowMount, mount } from '@vue/test-utils'
+import { createLocalVue, mount } from '@vue/test-utils'
 import Login from '@/pages/login.vue'
 import Vuetify from 'vuetify'
+import Vuex from 'vuex'
+
 
 describe('login.vue', () => {
 
@@ -8,16 +10,51 @@ describe('login.vue', () => {
   let localVue;
   let wrapper;
 
+  // vuex
+  let store
+  let actions
+
   beforeEach(() => {
     localVue = createLocalVue(); 
+    localVue.use(Vuex)
     vuetify = new Vuetify();
+
+    actions = {
+      LOGIN: jest.fn()
+    }
+
+    store = new Vuex.Store({
+      modules: {
+        user:{
+          actions,
+          //namespaced: true
+        }
+      }
+    })
 
     wrapper = mount(Login, {
       localVue,
-      vuetify
+      vuetify,
+      store
      })
 
   })
+
+  it('should click on button and login user', async () => {
+
+    await wrapper.setData({ name: 'Teste' })
+    await wrapper.setData({ password: '123123' })
+    await wrapper.setData({ isAdmin: true })
+  
+    const button = 
+    await wrapper.find('.btn-login');
+    expect(button.exists()).toBe(true)
+  
+    await button.trigger('click')
+    expect(actions.LOGIN).toHaveBeenCalled()
+  
+  })
+
 
  it('should be a Vue instance', () => {
     expect(wrapper.vm).toBeTruthy()
@@ -73,5 +110,4 @@ describe('login.vue', () => {
     expect(button.exists()).toBe(false)
 
   })
-
 })
