@@ -24,7 +24,8 @@ export default  {
 
       ep.characters = dataChar
     }
-
+    data = constructorEpisode(data)
+    console.log(data)
     commit('POVOATE_EPISODES_TREE', data)
 
   },
@@ -45,4 +46,41 @@ export default  {
 
     commit('GET_CHARACTER_INFO', data)
   },
+}
+
+function constructorEpisode(eps){
+  let items = []
+
+  for (let ep of eps){
+
+    let episodeFormat = 
+    "Season "  + ep.episode.split('S')[1].split('E')[0] +
+    " | Episode " + ep.episode.split('S')[1].split('E')[1]
+
+    let jsonAux = {
+      id :  ep.id ,
+      name : episodeFormat ,
+      type: 'episode',
+      children : constructorCharacters(ep.episode, ep.characters)
+    }
+    items.push(jsonAux)
+  }
+   return items
+}
+
+function constructorCharacters(episode, chars){
+  let characters = []
+
+  for (let c of chars){
+
+      characters.push({
+        name: c.name, 
+        url: c.url,
+        type: 'characterUrl',
+        id: episode +"C"+ c.id
+        })
+
+  }
+
+  return characters
 }

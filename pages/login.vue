@@ -43,9 +43,9 @@ export default {
 
   data(){
     return{
-      name:'',
-      password:'',
-      isAdmin:false,
+      name:'a',
+      password:'a',
+      isAdmin:true,
     }
   },
 

@@ -36,7 +36,7 @@
 
     data(){
       return{
-        items: this.constructorEpisode(this.$store.state.treeView.episodes),
+        items: this.$store.state.treeView.episodes,
         active: [],
       }
     },
@@ -50,9 +50,9 @@
     watch: {
       episodes: {
         handler(){
-          this.items = this.constructorEpisode(this.episodes)
+          this.items = this.episodes
+          console.log('this.items', this.items)
         },
-
       },
 
       active: {
@@ -73,42 +73,6 @@
           await this.POVOATE_EPISODES_TREE()
       },
       
-      constructorEpisode(eps){
-        let items = []
-
-        for (let ep of eps){
-
-          let episodeFormat = 
-          "Season "  + ep.episode.split('S')[1].split('E')[0] +
-          " | Episode " + ep.episode.split('S')[1].split('E')[1]
-
-          let jsonAux = {
-            id :  ep.id ,
-            name : episodeFormat ,
-            type: 'episode',
-            children : this.constructorCharacters(ep.episode, ep.characters)
-          }
-          items.push(jsonAux)
-        }
-         return items
-      },
-
-      constructorCharacters(episode, chars){
-        let characters = []
-
-        for (let c of chars){
-
-            characters.push({
-              name: c.name, 
-              url: c.url,
-              type: 'characterUrl',
-              id: episode +"C"+ c.id
-              })
-
-        }
-
-        return characters
-      },
     },
 
     mounted(){
