@@ -4,6 +4,7 @@
 
 A PRATICA DE:
 - NuxtJs
+- Vuex
 - VueJs
 - HTML / CSS
 - Javascript
