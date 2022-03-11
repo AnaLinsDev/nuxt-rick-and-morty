@@ -37,7 +37,6 @@
 </template>
 
 <script>
-
 import {mapActions} from 'vuex'
 
 export default {
@@ -52,26 +51,21 @@ export default {
 
   computed: {
     isValid(){
-      if(this.name.trim() == '' ||this.password.trim() == '' ){
-        return false
-      }else{
-        return true
-      }
+      return (this.name.trim() == '' ||this.password.trim() == '' ) 
+      ? false : true
+      
     }
   },
-  /* APENAS PARA MELHORAR VELOCIDADE DE DESENVOLVIMENTO
-  mounted(){
-    this.login()
-  },
-*/
+
   methods: {
-    ...mapActions(['LOGIN']),
+      ...mapActions(['LOGIN']),
       login(){   
         this.LOGIN({
           name:this.name,
           password: this.password,
           isAdmin : this.isAdmin
           })
+         
       },
   }
 }

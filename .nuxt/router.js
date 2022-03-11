@@ -4,11 +4,11 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _29176138 = () => interopDefault(import('..\\pages\\characters.vue' /* webpackChunkName: "pages/characters" */))
-const _73c4eb36 = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
-const _e94ddaea = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
-const _d721e7d4 = () => interopDefault(import('..\\pages\\tree-view.vue' /* webpackChunkName: "pages/tree-view" */))
-const _7c9d2118 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _814c400e = () => interopDefault(import('..\\pages\\characters.vue' /* webpackChunkName: "pages/characters" */))
+const _1dc71055 = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
+const _797ec1ac = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _3e713135 = () => interopDefault(import('..\\pages\\tree-view.vue' /* webpackChunkName: "pages/tree-view" */))
+const _0cce07da = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -23,23 +23,23 @@ export const routerOptions = {
 
   routes: [{
     path: "/characters",
-    component: _29176138,
+    component: _814c400e,
     name: "characters"
   }, {
     path: "/dashboard",
-    component: _73c4eb36,
+    component: _1dc71055,
     name: "dashboard"
   }, {
     path: "/login",
-    component: _e94ddaea,
+    component: _797ec1ac,
     name: "login"
   }, {
     path: "/tree-view",
-    component: _d721e7d4,
+    component: _3e713135,
     name: "tree-view"
   }, {
     path: "/",
-    component: _7c9d2118,
+    component: _0cce07da,
     name: "index"
   }],
 
