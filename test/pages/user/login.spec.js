@@ -3,7 +3,6 @@ import Login from '@/pages/login.vue'
 import Vuetify from 'vuetify'
 import Vuex from 'vuex'
 
-
 describe('login.vue', () => {
 
   let vuetify;
@@ -27,7 +26,7 @@ describe('login.vue', () => {
       modules: {
         user:{
           actions,
-          //namespaced: true
+          namespaced: true
         }
       }
     })
