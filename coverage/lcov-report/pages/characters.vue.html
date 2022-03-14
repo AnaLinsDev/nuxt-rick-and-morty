@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -143,9 +143,7 @@
 <a name='L78'></a><a href='#L78'>78</a>
 <a name='L79'></a><a href='#L79'>79</a>
 <a name='L80'></a><a href='#L80'>80</a>
-<a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L81'></a><a href='#L81'>81</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -170,19 +168,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -190,7 +186,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -199,13 +195,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -231,9 +227,8 @@
   &lt;div class="characters-page"&gt;
 &nbsp;
     &lt;h1 class="title"&gt;Characters List&lt;/h1&gt;
-&nbsp;
     &lt;div class="list-characters"&gt;
-        &lt;card-character
+        &lt;CardCharacter
         v-for="c in characters" 
         :item="c"
         :key="c.id" /&gt;
@@ -253,26 +248,25 @@
 &nbsp;
 &lt;script&gt;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >import { mapActions, mapState } from 'vuex'</span>
+import { mapActions, mapState } from 'vuex'
 &nbsp;
 export default {
-&nbsp;
   computed: {
     ...mapState('characters', {
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      characters: (state) =&gt; state.allListC,</span></span>
+      characters: (state) =&gt; state.allListC,
     }),
   },
 &nbsp;
-<span class="fstat-no" title="function not covered" >  data(){</span>
-<span class="cstat-no" title="statement not covered" >    return{</span>
+  data(){
+    return{
       page: 1,
     }
   },
 &nbsp;
   watch:{
     page: {
-<span class="fstat-no" title="function not covered" >      handler(){</span>
-<span class="cstat-no" title="statement not covered" >        this.povoate()</span>
+      handler(){
+        this.povoate()
       }
     }
   },
@@ -280,14 +274,14 @@ export default {
   methods:{
     ...mapActions('characters', ['POVOATE_CHARACTERS']),
 &nbsp;
-<span class="fstat-no" title="function not covered" >    async povoate(){</span>
-<span class="cstat-no" title="statement not covered" >      await this.POVOATE_CHARACTERS(this.page)</span>
+    async povoate(){
+      await this.POVOATE_CHARACTERS(this.page)
     }
 &nbsp;
   },
 &nbsp;
-<span class="fstat-no" title="function not covered" >  mounted(){</span>
-<span class="cstat-no" title="statement not covered" >    this.povoate()</span>
+  mounted(){
+    this.povoate()
   }
 }
 &lt;/script&gt;
@@ -316,7 +310,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Fri Mar 11 2022 17:39:23 GMT-0300 (Horário Padrão de Brasília)
+                at Mon Mar 14 2022 18:52:48 GMT-0300 (Horário Padrão de Brasília)
             </div>
         <script src="../prettify.js"></script>
         <script>

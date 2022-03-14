@@ -1,4 +1,3 @@
-
 import user from './modules/user/user'
 import characters from './modules/characters/characters'
 import dashboard from './modules/dashboard/dashboard'

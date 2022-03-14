@@ -2,9 +2,8 @@
   <div class="characters-page">
 
     <h1 class="title">Characters List</h1>
-
     <div class="list-characters">
-        <card-character
+        <CardCharacter
         v-for="c in characters" 
         :item="c"
         :key="c.id" />
@@ -27,7 +26,6 @@
 import { mapActions, mapState } from 'vuex'
 
 export default {
-
   computed: {
     ...mapState('characters', {
       characters: (state) => state.allListC,

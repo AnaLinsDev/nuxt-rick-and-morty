@@ -1,4 +1,5 @@
 export default {
+  
 	LOGIN(state, user) {
     try{
       state.name     = user.name
@@ -10,6 +11,7 @@ export default {
       console.error(e)
     }
 	},
+  
   LOGOUT(state) {
     try{
       state.name     = ''

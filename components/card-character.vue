@@ -8,7 +8,6 @@
       height="210px"
       width="210px" 
     ></v-img>
-
     <v-card-title>
      {{item.name}}
     </v-card-title>
@@ -23,7 +22,8 @@
 
 <script>
   export default {
-    props:['item']
+    name: 'CardCharacter',
+    props:['item'],
   }
 </script>
 

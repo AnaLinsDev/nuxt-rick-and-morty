@@ -1,22 +1,18 @@
 import { createLocalVue, mount } from '@vue/test-utils'
-import Login from '@/pages/login.vue'
+import LoginPage from '@/pages/login.vue'
 import Vuetify from 'vuetify'
 import Vuex from 'vuex'
 
 describe('login.vue', () => {
-
-  let vuetify;
-  let localVue;
+  let vuetify = new Vuetify();;
   let wrapper;
-
-  // vuex
   let store
   let actions
 
+  let localVue = createLocalVue(); 
+  localVue.use(Vuex)
+
   beforeEach(() => {
-    localVue = createLocalVue(); 
-    localVue.use(Vuex)
-    vuetify = new Vuetify();
 
     actions = {
       LOGIN: jest.fn()
@@ -31,7 +27,7 @@ describe('login.vue', () => {
       }
     })
 
-    wrapper = mount(Login, {
+    wrapper = mount(LoginPage, {
       localVue,
       vuetify,
       store
@@ -39,27 +35,16 @@ describe('login.vue', () => {
 
   })
 
-  it('should click on button and login user', async () => {
-
-    await wrapper.setData({ name: 'Teste' })
-    await wrapper.setData({ password: '123123' })
-    await wrapper.setData({ isAdmin: true })
-  
-    const button = 
-    await wrapper.find('.btn-login');
-    expect(button.exists()).toBe(true)
-  
-    await button.trigger('click')
-    expect(actions.LOGIN).toHaveBeenCalled()
-  
+  afterEach(() => {
+    wrapper.destroy()
   })
-
 
  it('should be a Vue instance', () => {
     expect(wrapper.vm).toBeTruthy()
   }) 
 
   it('should have text fields name and password ', async () => {
+
 
     // aqui pegará todas ocorrencias
     const allTextField = 
@@ -88,7 +73,7 @@ describe('login.vue', () => {
   }),
 
   it('should have a disabled button if local state is invalid', async () => {
-
+    
     // getting initial data
     expect(wrapper.vm.name).toBe('')
     expect(wrapper.vm.password).toBe('')
@@ -108,5 +93,21 @@ describe('login.vue', () => {
     const button = wrapper.find('.btn-login.v-btn--disabled');
     expect(button.exists()).toBe(false)
 
+  }),
+
+
+  it('should click on button and login user', async () => {
+
+    await wrapper.setData({ name: 'Teste' })
+    await wrapper.setData({ password: '123123' })
+    await wrapper.setData({ isAdmin: true })
+  
+    const button = 
+    await wrapper.find('.btn-login');
+    expect(button.exists()).toBe(true)
+  
+    await button.trigger('click')
+    expect(actions.LOGIN).toHaveBeenCalled()
+  
   })
 })

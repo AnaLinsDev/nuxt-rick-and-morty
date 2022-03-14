@@ -10,7 +10,6 @@ export default function ({ store, redirect, route }) {
 */
 
   // is NOT logged in and is NOT on login page
-  console.log(store.state.user.loggedIn && route.name != 'login')
   if (!store.state.user.loggedIn && route.name != 'login') {
     return redirect('/login')
   }
