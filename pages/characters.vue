@@ -41,7 +41,7 @@ export default {
   watch:{
     page: {
       handler(){
-        this.povoate()
+        this.povoate(this.page)
       }
     }
   },
@@ -49,14 +49,14 @@ export default {
   methods:{
     ...mapActions('characters', ['POVOATE_CHARACTERS']),
 
-    async povoate(){
-      await this.POVOATE_CHARACTERS(this.page)
+    async povoate(page){
+      await this.POVOATE_CHARACTERS(page)
     }
 
   },
 
   mounted(){
-    this.povoate()
+    this.povoate(this.page)
   }
 }
 </script>
