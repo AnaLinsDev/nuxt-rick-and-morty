@@ -43,3 +43,7 @@ A PRATICA DE:
 ## Após selecionar o personagem
 ![image](https://user-images.githubusercontent.com/60307596/157511470-02abfb8e-a901-4bbe-9609-89912b81d91b.png)
 
+## Terminal após testes gerais
+![image](https://user-images.githubusercontent.com/60307596/158440538-b555504d-7478-4af3-9d95-80d0dac6a500.png)
+
+
