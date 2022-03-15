@@ -51,12 +51,12 @@
       episodes: {
         handler(){
           this.items = this.episodes
-          console.log('this.items', this.items)
         },
       },
 
       active: {
         async handler(){
+        console.log(this.active)
         let id = this.active[0].split('C')
         id = id.pop()
         await this.GET_CHARACTER_INFO(id)

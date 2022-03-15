@@ -1,9 +1,9 @@
 export { default as CardCharacter } from '../..\\components\\card-character.vue'
 export { default as Menu } from '../..\\components\\menu.vue'
 export { default as PainelCard } from '../..\\components\\painel-card.vue'
+export { default as ChartsShapeChartPie } from '../..\\components\\charts-shape\\chart-pie.vue'
 export { default as ChartsFinalLiveChartPie } from '../..\\components\\charts-final\\live-chart-pie.vue'
 export { default as ChartsFinalSideChartPie } from '../..\\components\\charts-final\\side-chart-pie.vue'
-export { default as ChartsShapeChartPie } from '../..\\components\\charts-shape\\chart-pie.vue'
 export { default as ListsListCharacterInfo } from '../..\\components\\lists\\list-character-info.vue'
 export { default as ListsListEpisodes } from '../..\\components\\lists\\list-episodes.vue'
 

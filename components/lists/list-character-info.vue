@@ -49,7 +49,7 @@ import { mapState } from 'vuex'
     },
 
     watch:{
-      info(n,o){
+      info(){
         this.image = this.info['image']
         delete this.info['id']
         delete this.info['image']

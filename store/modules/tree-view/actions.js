@@ -25,7 +25,6 @@ export default  {
       ep.characters = dataChar
     }
     data = constructorEpisode(data)
-    console.log(data)
     commit('POVOATE_EPISODES_TREE', data)
 
   },

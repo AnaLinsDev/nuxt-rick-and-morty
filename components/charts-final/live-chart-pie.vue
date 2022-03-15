@@ -46,24 +46,24 @@ export default {
         ]
 
       this.chartdata = {
-      labels: this.labels,
-      datasets: [
-        {
-          data: this.data,
-          backgroundColor: this.backgroundColor 
-        }
-      ]
-    }
-    this.options = {
-      scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true,
-              min :0
-            }
-          }]
+        labels: this.labels,
+        datasets: [
+          {
+            data: this.data,
+            backgroundColor: this.backgroundColor 
           }
+        ]
     }
+      this.options = {
+        scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                min :0
+              }
+            }]
+        }
+      }
       this.loaded = true
     } catch (e) {
       console.error(e)

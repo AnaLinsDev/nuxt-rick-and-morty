@@ -16,15 +16,16 @@
     <v-btn
     @click="logout"
     color = "rgb(228, 89, 89)"
-    class="btn-main-menu"
+    class="btn-main-menu logout"
     >
       LogOut 
     </v-btn>
     </div>
 
 
-    <v-btn v-if="!userData.loggedIn"
-    class="btn-main-menu"
+    <v-btn 
+    v-if="!userData.loggedIn"
+    class="btn-main-menu login"
     color = "rgb(0, 255, 255)"
     to="/login"
     >
@@ -35,28 +36,20 @@
 </template>
 
 <script>
-
 import {mapActions} from 'vuex'
-
 export default {
-
-
   computed: {
     userData(){
       this.routes[2][2] = this.$store.state.user.isAdmin 
       return this.$store.state.user
     }
   },
-
   methods: {
     ...mapActions('user', ['LOGOUT']),
       logout(){
         this.LOGOUT()
-        this.$router.push('/login')
       },
     },
-
-
   data(){
     return{
       routes: [
@@ -74,9 +67,7 @@ export default {
     margin-right: 20px;
     height: 100%;
   }
-
   .v-toolbar__content {
       justify-content: flex-end;
   }
-
 </style>

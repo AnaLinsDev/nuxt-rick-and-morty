@@ -83,8 +83,11 @@ describe('character.vue', () => {
 
     const allCards = wrapper.findAll('cardcharacter');
 
+    // vuex state
     expect(state.allListC).toHaveLength(5);
+    // computed data
     expect(wrapper.vm.characters).toHaveLength(5);
+    // renderização no DOM
     expect(allCards).toHaveLength(5);
 
   }) 
