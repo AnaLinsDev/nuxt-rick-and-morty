@@ -45,7 +45,10 @@ describe('live-chart-pie.vue', () => {
     wrapper = mount(LiveChartComponent, {
       localVue,
       vuetify,
-      store
+      store,
+      propsData: {
+        chartdatastatus: {alive: 435, dead: 276, unknown: 89}
+      }
      })
 
   })

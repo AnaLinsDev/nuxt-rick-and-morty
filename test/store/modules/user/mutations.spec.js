@@ -14,7 +14,7 @@ describe("User Auth", () => {
     loggedIn:false
   })
 
-  it("login a valid user", () => {
+  it("login a valid user", async () => {
     const state = user_empty()
     const user = user_logged_admin()
 

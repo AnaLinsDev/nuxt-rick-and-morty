@@ -6,13 +6,18 @@ import Vuex from 'vuex'
 describe('login.vue', () => {
   let vuetify = new Vuetify();;
   let wrapper;
+  let router;
   let store
   let actions
 
   let localVue = createLocalVue(); 
   localVue.use(Vuex)
-
+  
   beforeEach(() => {
+
+    router = {
+      push: jest.fn()
+    }
 
     actions = {
       LOGIN: jest.fn()
@@ -30,7 +35,8 @@ describe('login.vue', () => {
     wrapper = mount(LoginPage, {
       localVue,
       vuetify,
-      store
+      store,
+      mocks : { $router : router }
      })
 
   })
@@ -105,9 +111,11 @@ describe('login.vue', () => {
     const button = 
     await wrapper.find('.btn-login');
     expect(button.exists()).toBe(true)
-  
+
     await button.trigger('click')
     expect(actions.LOGIN).toHaveBeenCalled()
+    expect(router.push).toBeCalledWith('/characters')
+
   
   })
 })

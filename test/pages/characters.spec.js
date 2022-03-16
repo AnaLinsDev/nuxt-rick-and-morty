@@ -4,6 +4,9 @@ import mutations from '@/store/modules/characters/mutations'
 import Vuetify from 'vuetify'
 import Vuex from 'vuex'
 
+import PainelCard from '@/components/painel-card.vue'
+import CardCharacter from '@/components/card-character.vue'
+
 
 
 describe('character.vue', () => {
@@ -17,6 +20,9 @@ describe('character.vue', () => {
 
   let localVue = createLocalVue(); 
   localVue.use(Vuex)
+  localVue.component("PainelCard", PainelCard)
+  localVue.component("CardCharacter", CardCharacter)
+
 
   beforeEach(() => {
 
@@ -81,7 +87,9 @@ describe('character.vue', () => {
 
     await mutations.POVOATE_CHARACTERS(state, data)
 
-    const allCards = wrapper.findAll('cardcharacter');
+    await wrapper.vm.$nextTick()
+
+    const allCards = wrapper.findAllComponents(CardCharacter);
 
     // vuex state
     expect(state.allListC).toHaveLength(5);

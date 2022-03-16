@@ -1,8 +1,11 @@
 import { createLocalVue, mount } from '@vue/test-utils'
 import DashboardPage from '@/pages/dashboard'
 import mutations from '@/store/modules/dashboard/mutations'
+
 import Vuetify from 'vuetify'
 import Vuex from 'vuex'
+
+import PainelCard from '@/components/painel-card.vue'
 
 describe('dashboard.vue', () => {
   let vuetify = new Vuetify();;
@@ -14,6 +17,7 @@ describe('dashboard.vue', () => {
   
   let localVue = createLocalVue(); 
   localVue.use(Vuex)
+  localVue.component("PainelCard", PainelCard)
 
   beforeEach(() => {
 

@@ -35,9 +35,8 @@ export default {
   },
   
   async mounted () {
-
+    
     this.loaded = false
-    try {
 
       this.data = [
         this.chartdatastatus.dead,
@@ -65,9 +64,6 @@ export default {
         }
       }
       this.loaded = true
-    } catch (e) {
-      console.error(e)
-    }
   }
   
 }

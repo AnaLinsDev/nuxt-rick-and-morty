@@ -64,7 +64,8 @@ export default {
           name:this.name,
           password: this.password,
           isAdmin : this.isAdmin
-          }) 
+          }),
+          this.$router.push('/characters') 
       },
   }
 }

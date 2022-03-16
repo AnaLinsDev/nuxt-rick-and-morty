@@ -1,43 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1647366533562" clover="3.2.0">
-  <project timestamp="1647366533562" name="All files">
-    <metrics statements="67" coveredstatements="67" conditionals="2" coveredconditionals="2" methods="34" coveredmethods="34" elements="103" coveredelements="103" complexity="0" loc="67" ncloc="67" packages="5" files="10" classes="10"/>
+<coverage generated="1647447090747" clover="3.2.0">
+  <project timestamp="1647447090747" name="All files">
+    <metrics statements="63" coveredstatements="63" conditionals="2" coveredconditionals="2" methods="34" coveredmethods="34" elements="99" coveredelements="99" complexity="0" loc="63" ncloc="63" packages="5" files="10" classes="10"/>
     <package name="components">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="menu.vue" path="C:\Users\Ana Júlia Lins\Desktop\Vue\rm-app\nuxt-rick-and-morty\components\menu.vue">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="39" count="1" type="stmt"/>
-        <line num="43" count="5" type="stmt"/>
-        <line num="44" count="5" type="stmt"/>
+        <line num="43" count="8" type="stmt"/>
+        <line num="44" count="8" type="stmt"/>
         <line num="50" count="1" type="stmt"/>
-        <line num="54" count="3" type="stmt"/>
+        <line num="55" count="5" type="stmt"/>
       </file>
     </package>
     <package name="components.charts-final">
-      <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <file name="live-chart-pie.vue" path="C:\Users\Ana Júlia Lins\Desktop\Vue\rm-app\nuxt-rick-and-morty\components\charts-final\live-chart-pie.vue">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="14" count="2" type="stmt"/>
         <line num="23" count="8" type="stmt"/>
         <line num="39" count="8" type="stmt"/>
-        <line num="40" count="8" type="stmt"/>
-        <line num="42" count="8" type="stmt"/>
-        <line num="48" count="7" type="stmt"/>
-        <line num="57" count="7" type="stmt"/>
-        <line num="67" count="7" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
+        <line num="41" count="8" type="stmt"/>
+        <line num="47" count="8" type="stmt"/>
+        <line num="56" count="8" type="stmt"/>
+        <line num="66" count="8" type="stmt"/>
       </file>
       <file name="side-chart-pie.vue" path="C:\Users\Ana Júlia Lins\Desktop\Vue\rm-app\nuxt-rick-and-morty\components\charts-final\side-chart-pie.vue">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="14" count="2" type="stmt"/>
         <line num="23" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
         <line num="41" count="2" type="stmt"/>
-        <line num="42" count="2" type="stmt"/>
-        <line num="44" count="2" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
-        <line num="71" count="1" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
       </file>
     </package>
     <package name="components.charts-shape">
@@ -45,7 +41,7 @@
       <file name="chart-pie.vue" path="C:\Users\Ana Júlia Lins\Desktop\Vue\rm-app\nuxt-rick-and-morty\components\charts-shape\chart-pie.vue">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="3" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
       </file>
     </package>
     <package name="components.lists">

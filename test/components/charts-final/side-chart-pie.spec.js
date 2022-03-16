@@ -45,7 +45,13 @@ describe('side-chart-pie.vue', () => {
     wrapper = mount(SideChartComponent, {
       localVue,
       vuetify,
-      store
+      store,     
+      propsData: {
+        chartdatastatus: { 
+          "pageFrom": 1, "pageTo": 20, "list": [], 
+          "id": 0, "alive": 209, "dead": 135, "unknown": 56 
+        }
+      }
      })
 
   })
